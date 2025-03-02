@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lidalove - 立达中学互动故事游戏</title>
+    <style>
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        
+        #title-screen {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #fffdfa;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 40px auto;
+            border-radius: 8px;
+        }
+        
+        #title-screen h1 {
+            font-size: 32px;
+            color: #ff6b6b;
+            margin-bottom: 10px;
+        }
+        
+        #title-screen p {
+            font-size: 16px;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        
+        #game-container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            display: none;
+        }
+        
+        #story {
+            font-size: 18px;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        #options {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .option, .button {
+            padding: 12px 15px;
+            margin: 6px 0;
+            background-color: #f0f0f0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-align: left;
+            font-size: 16px;
+            transition: all 0.2s;
+        }
+        
+        .option:hover, .button:hover {
+            background-color: #e0e0e0;
+            transform: translateY(-2px);
+        }
+        
+        .button {
+            background-color: #ff6b6b;
+            color: white;
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .button:hover {
+            background-color: #ff5252;
+        }
+        
+        #game-menu {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        
+        #game-menu button {
+            padding: 6px 12px;
+            font-size: 14px;
+            background-color: #f0f0f0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            color: #777;
+        }
+        
+        a {
+            color: #ff6b6b;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div id="title-screen">
+        <h1>Lidalove</h1>
+        <p>探索立达中学的青春故事，与 Sue 一起创造属于你们的回忆</p>
+        <button id="start-game" class="button">开始游戏</button>
+        <button id="continue-game" class="button" style="display:none;">继续游戏</button>
+        <p><a href="https://github.com/yourusername/lidalove" target="_blank">GitHub 项目</a></p>
+    </div>
+
+    <div id="game-container">
+        <div id="game-menu">
+            <button id="save-game">保存游戏</button>
+            <button id="back-to-title">返回标题</button>
+        </div>
+        <div id="story"></div>
+        <div id="options"></div>
+    </div>
+
+    <footer>
+        &copy; 2025 Lidalove - <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+    </footer>
+
+    <script src="game.js"></script>
+</body>
+</html>
